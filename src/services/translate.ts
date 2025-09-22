@@ -26,7 +26,7 @@ export async function translateCode({
   const payload = { code, from, to, model: normalizedModel };
   console.log("Enviando para o backend:", payload);
 
-  const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const apiUrl = process.env.VITE_API_URL || "http://localhost:8000";
 
   const res = await fetch(`${apiUrl}/translate`, {
     method: "POST",
